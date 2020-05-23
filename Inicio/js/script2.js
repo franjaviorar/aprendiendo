@@ -1,7 +1,14 @@
 jQuery('document').ready(function($){
 
     var menuBtn = $('.menu-icono'),
-    menu = $('.navegacion ul');
+    menu = $('.navegacion ul'),
+    /*medir pantalla*/
+    ventana = $(window).width();
+     
+
+    if (window = 780){
+        menu.removeClass('show')
+    }
 
     menuBtn.click(function(){
 
