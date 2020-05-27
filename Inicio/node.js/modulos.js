@@ -68,11 +68,39 @@ fs.readFile('./texto.txt', function(err, data){
 
 const http = require('http');
 
-
-http.createServer(function(req, res){
+/*
+const handleServer = function(req, res){
 
     res.writeHead(200, {'Content-type': 'text/html' });
-    res.write('<h1> Titulo Principal alv</h1>');
+    res.write('<h1>Titulo Principal alv</h1>');
     res.end();
 
-}).listen(3000);
+}
+
+
+const server = http.createServer(handleServer);
+
+server.listen(3000,function(){
+    console.log('Server en el puerto 3000'.red);
+    console.log(' esta es solo la practica para realizr la pueba de colores en consola'.green);
+});
+
+
+*/
+
+const colors = require ('colors');
+
+
+// framework Express para node.js
+
+const express = require('express');
+
+const server = express();
+
+server.get('/', (req, res) =>{
+    res.send('<h1> este es el texto vato</h1>')
+} )
+
+server.listen(3000, () => {
+    console.log('esta madre esta hecha'.yellow);
+})
